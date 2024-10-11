@@ -105,6 +105,7 @@ table {
         z-index:5;
         left: 50%;
         transform: translateX(-50%);
+        padding-top: 10px;
     }
     nav ul {
         grid-area: hamberger;
@@ -158,10 +159,25 @@ table {
     /* ----search bar------*/
     form {
         margin: 0 auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
         padding: 75px 0 0 20px;
         max-width: 500px;
-        margin: 0 auto;
         background-color: var(--white);
+        margin-top: 40px;
+    }
+    #site-search{
+        padding: 10px;
+        border: 1px inset var(--orange);
+        width: 70%;
+        margin: 0;
+    }
+    form svg{
+        background-color: var(--orange);
+        cursor: pointer;
+        margin: 0;
+        border: 3px solid var(--orange);
     }
     label{
         margin: 0 0 4px 8px;
@@ -169,11 +185,12 @@ table {
     input, select, textarea{
         padding: 10px;
         margin-bottom: 24px;
-        border: 2px solid var(--orange);
+       
     }
         /* ---- main tags ------*/
     #main-header {
         margin: 0 auto;
+        padding: 20px 0;
     }
     h1 {
         font-family: var(--heading-font);
@@ -182,15 +199,18 @@ table {
     article h1{
         margin: 0 auto;
         text-align: center;
+        padding-bottom: 10px;
     }
     #main-header ul {
         list-style-type: none; 
         display: flex;
         align-items: center;
-        justify-content: center;
+        justify-content: space-around;
+        
     }
     #main-header ul li{
         margin-right: 15px; 
+        cursor: pointer;
     }
     #main-header ul li figure{
         display: inline-block;
@@ -199,6 +219,7 @@ table {
     #main-header ul li svg {
         display: block;
         margin: 0 auto;
+        
     }
     #main-header ul li figcaption {
         margin-top: 5px;
@@ -206,6 +227,8 @@ table {
         font-size: 20px;
         color: var(--orange);
         text-transform: uppercase;
+        
+        
     }
     img{
         width: 100%;
