@@ -56,6 +56,9 @@ table {
     --teal: #7ABFBF;
     --lt-teal: rgba(122, 191, 191, .5);
     --orange: #EB5428;
+    --main-font: 'Montserrat', Helvetica, sans-serif;
+    --heading-font: 'Bebas Neue', Arial, sans-serif;
+
 }
 
 /* --------------------GLOBAL STYLES (mobile first/small - 414px) --------------------*/
@@ -65,6 +68,7 @@ table {
     padding: 0;
 }
 @media screen and (min-width: 414px) {
+    /* ---- body layout ------*/
     body {
         display: grid;
         grid-template-areas: 
@@ -72,9 +76,15 @@ table {
             "main"
             "footer";
         grid-template-columns: 1fr;
+        background-color: var(--lt-teal);
+        line-height: 1.5;
     }
     #main-article {
         grid-area: main;
+        min-width: 414px;
+        max-width: 500px;
+        background-color: var(--white);
+        margin: 0 auto;
     }
     #main-nav {
         grid-area: nav;
@@ -82,14 +92,19 @@ table {
     #main-footer {
         grid-area: footer;
     }
+    /* ---- navigation menu ------*/
+    
     nav {
         grid-area: nav;
         min-width: 414px;
+        width: 500px;
         background-color: #ffffff;
         box-shadow: 0px 3px 3px #bbb;
         position: fixed;
         top: 0;
         z-index:5;
+        left: 50%;
+        transform: translateX(-50%);
     }
     nav ul {
         grid-area: hamberger;
@@ -140,7 +155,169 @@ table {
         height: 1px;
         width: 1px;
     }
+    /* ----search bar------*/
+    form {
+        margin: 0 auto;
+        padding: 75px 0 0 20px;
+        max-width: 500px;
+        margin: 0 auto;
+        background-color: var(--white);
+    }
+    label{
+        margin: 0 0 4px 8px;
+    }
+    input, select, textarea{
+        padding: 10px;
+        margin-bottom: 24px;
+        border: 2px solid var(--orange);
+    }
+        /* ---- main tags ------*/
+    #main-header {
+        margin: 0 auto;
+    }
+    h1 {
+        font-family: var(--heading-font);
+        font-size: 40px;
+    }
+    article h1{
+        margin: 0 auto;
+        text-align: center;
+    }
+    #main-header ul {
+        list-style-type: none; 
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    #main-header ul li{
+        margin-right: 15px; 
+    }
+    #main-header ul li figure{
+        display: inline-block;
+        text-align: center;
+    }
+    #main-header ul li svg {
+        display: block;
+        margin: 0 auto;
+    }
+    #main-header ul li figcaption {
+        margin-top: 5px;
+        font-family: var(--heading-font);
+        font-size: 20px;
+        color: var(--orange);
+        text-transform: uppercase;
+    }
+    img{
+        width: 100%;
+    }
+    p, dd, li, nav, input{
+        font-size: 16px;
+        font-family: var(--main-font);
+    }
+    nav a, nav span, menu li, footer{
+        font-family: var(--heading-font);
+        font-size: 20px;
+    }
+    dt{
+        font-family: var(--main-font);
+        font-weight: bold;
+        font-size: 16px;
+    }
+    #intro-section p, #details-section, #ingredients-aside, #directions-section, #side-dishes-aside {
+        margin: 0 auto;
+        padding: 5px;
+    }
+
+    h2 {
+        font-family: var(--heading-font);
+        font-size: 30px;
+        text-align: center;
+    }
+    #details-section dl {
+        display: block;
+    }
+    #details-section dt, #details-section dd {
+        display: inline;
+        margin: 0;
+        padding: 0 10px;
+    }
+    #details-section dt + dd{
+        display: inline;
+    }
+    #details-section dl > div {
+        display: flex;
+    }
+    #ingredients-aside ul {
+        list-style-type: square;
+        padding-left: 20px;
+    }
+    #directions-section ol {
+        list-style-type: decimal;
+        padding-left: 20px;
+    }
+    #directions-section li {
+        margin-bottom: 5px;
+    }
+    #side-dishes-aside {
+        background-color: var(--teal);
+        margin-bottom: 10px;
+    }
+    #side-dishes-aside h3{
+        font-family: var(--heading-font);
+        font-size: 25px;
+        text-transform: uppercase;
+    }
+    #side-dishes-aside figure {
+        display: flex;
+        align-items: center;
+        margin-bottom: 20px;
+    }
+    #side-dishes-aside img {
+        float: left;
+        width: 100px;
+        height: auto;
+        margin-right: 15px;
+    }
+    #side-dishes-aside figcaption {
+        flex: 1;
+    }
+    /* ---- footer tags ------*/
+    #main-footer h2, #main-footer h3{
+        visibility: hidden;
+        height: 1px;
+        width: 1px;
+    }
+    #main-footer {
+        background-color: var(--white);
+        width: 500px;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 20px;
+    }
+    #main-footer div {
+        display: flex;
+        justify-content: space-around;
+        width: 100%;
+        margin-bottom: 20px;
+    }
+    #main-footer img {
+        width: 225px;
+        margin-bottom: 20px;
+        order: 2;
+    }
+    #main-footer p {
+        font-family: var(--heading-font);
+        font-size: 20px;
+        font-weight: bold;
+        text-transform: uppercase;
+        line-height: 1;
+        order: 3;
+    }
 }
+
 /*-------------------- MEDIA QUERY (medium - 768px) --------------------------------*/
 
 /*-------------------- MEDIA QUERY (large - 1280px) ------------------------------------*/
