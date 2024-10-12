@@ -340,7 +340,114 @@ table {
         order: 3;
     }
 }
-
 /*-------------------- MEDIA QUERY (medium - 768px) --------------------------------*/
-
+@media screen and (min-width: 768px) {
+      /* ---- body layout ------*/
+      body {
+        display: grid;
+        grid-template-areas: 
+            "nav"
+            "main"
+            "footer";
+        grid-template-columns: 1fr;
+        background-color: var(--lt-teal);
+        line-height: 1.5;
+    }
+    #main-article {
+        grid-area: main;
+        min-width: 414px;
+        max-width: 500px;
+        background-color: var(--white);
+        margin: 0 auto;
+    }
+    #main-footer {
+        grid-area: footer;
+    }
+    header {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 20px;
+        background-color: #f8f8f8;
+        position: relative; /* Allows absolute positioning of children */
+        width: 100%;
+    }
+    
+    #main-nav {
+        grid-area: nav;
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        align-items: center;
+        position: relative;
+    }
+    
+    #logo {
+        position: absolute;
+        left: 20px;
+        top: 20px;
+    }
+    
+    #sign-in {
+        position: absolute;
+        right: 20px;
+        top: 20px;
+    }
+    
+    form {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 20px 0; /* Space around the form */
+        position: absolute;
+        top: 20px;
+        left: 50%;
+        transform: translateX(-50%); /* Center the form horizontally */
+    }
+    
+    #site-search {
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px 0 0 5px;
+        width: 250px;
+        height: 40px;
+        margin: 0;
+    }
+    
+    form svg {
+        background-color: #EB5428;
+        padding: 10px;
+        border-radius: 0 5px 5px 0;
+        height: 40px;
+        width: 40px;
+        cursor: pointer;
+        margin: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    ul {
+        display: flex;
+        justify-content: center;
+        list-style: none;
+        padding: 0;
+        margin: 80px 0 0 0; /* Space below the form */
+        width: 100%;
+    }
+    
+    ul li {
+        margin: 0 10px; /* Space between images */
+    }
+    
+    ul img {
+        width: 60px; /* Set a consistent size for images */
+        height: auto;
+    }
+    
+    #main-nav {
+        flex-direction: column;
+        align-items: center;
+    }
+} 
 /*-------------------- MEDIA QUERY (large - 1280px) ------------------------------------*/
