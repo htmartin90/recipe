@@ -451,3 +451,25 @@ table {
     }
 } 
 /*-------------------- MEDIA QUERY (large - 1280px) ------------------------------------*/
+/*-------------------- MEDIA QUERY Print ------------------------------------*/
+@media print {
+    @page {
+      margin: 0.5in;
+    }
+    body {
+      font-family: serif;
+    }
+    img {
+      display: none;
+    }
+    nav {
+      display: none;
+    }
+    a::after {
+      content: " (" attr(href) ")";
+    }
+    body {
+      overflow: hidden;
+      max-height: 100vh;
+    }
+  }
