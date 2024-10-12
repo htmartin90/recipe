@@ -369,7 +369,7 @@ table {
         align-items: center;
         padding: 20px;
         background-color: #f8f8f8;
-        position: relative; /* Allows absolute positioning of children */
+        position: relative; 
         width: 100%;
     }
     
@@ -398,11 +398,11 @@ table {
         display: flex;
         align-items: center;
         justify-content: center;
-        margin: 20px 0; /* Space around the form */
+        margin: 20px 0; 
         position: absolute;
         top: 20px;
         left: 50%;
-        transform: translateX(-50%); /* Center the form horizontally */
+        transform: translateX(-50%); 
     }
     
     #site-search {
@@ -432,16 +432,16 @@ table {
         justify-content: center;
         list-style: none;
         padding: 0;
-        margin: 80px 0 0 0; /* Space below the form */
+        margin: 80px 0 0 0; 
         width: 100%;
     }
     
     ul li {
-        margin: 0 10px; /* Space between images */
+        margin: 0 10px; 
     }
     
     ul img {
-        width: 60px; /* Set a consistent size for images */
+        width: 60px; 
         height: auto;
     }
     
